@@ -720,7 +720,7 @@ class Client(object):
         self._request(
             method='POST',
             path='/keys',
-            json={'key': ecdsa_to_hex(str(public_key))})
+            json={'key': ecdsa_to_hex(public_key)})
 
     @handle_nonhttp_errors
     def token_create(self, bucket_id, operation):
