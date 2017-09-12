@@ -676,7 +676,7 @@ class Client(object):
         if 'Y' in s.upper():
             self.key_export()
 
-        self.key_register(self.public_key)
+        self.key_register(self.public_key.to_pem())
 
     def key_import(self, private_keyfile_path, public_keyfile_path):
         self.logger.info(
